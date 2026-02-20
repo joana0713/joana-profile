@@ -1,26 +1,246 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.layout {
+  display: flex;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ===== SIDEBAR ===== */
+
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  background: #0b1c2d;
+  position: fixed;
+  color: white;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.sidebar-inner {
+  padding: 30px 20px;
+}
+
+.profile {
+  text-align: center;
+  margin: 40px 0px;
+}
+
+.profile img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #1e293b;
+  margin-bottom: 15px;
+}
+
+.profile h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.socials a {
+  width: 32px;
+  height: 32px;
+  background: #1e293b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5e1;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  background: #4f46e5;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 10px;
+  font-size: 18px;
+  color: #cbd5e1;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav li:hover {
+  background: #1e293b;
+  color: white;
+  transform: translateX(5px);
+}
+
+/* ===== MAIN ===== */
+
+.main {
+  margin-left: 280px;
+  width: calc(100% - 280px);
+}
+
+/* ===== HERO ===== */
+
+.hero {
+  height: 100vh;
+  background: url("/bg.png") no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  padding-left: 140px;
+  color: white;
+}
+
+/* 이름 스타일 (스크린샷처럼 크게) */
+.hero-name {
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* role 스타일 */
+.hero-role {
+  font-size: 28px;
+  font-weight: 400;
+  position: relative;
+}
+
+/* 파란 underline */
+.typing {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.typing::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: #4f46e5;
+}
+
+/* 커서 blink */
+.typing {
+  border-right: 2px solid #ffffff;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0% { border-color: transparent; }
+  50% { border-color: white; }
+  100% { border-color: transparent; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main {
+  margin-left: 280px;
+  width: calc(100% - 280px);
+}
+
+/* ACTIVE 메뉴 */
+nav li.active {
+  background: #1e293b;
+  color: white;
+}
+
+/* ===== ABOUT ===== */
+
+.about {
+  padding: 80px 100px;
+  background: #f8fafc;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.underline {
+  width: 60px;
+  height: 3px;
+  background: #4f46e5;
+  margin: 10px 0 40px;
+}
+
+.about-content {
+  display: flex;
+  gap: 50px;
+}
+
+.about-image img {
+  width: 400px;
+  border-radius: 8px;
+}
+
+.about-info h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.info-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px;
+  margin-bottom: 20px;
+  display: grid;
+  font-size: 19px;
+}
+
+.about-text {
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-box h3 {
+  font-size: 36px;
+  color: #4f46e5;
+}
+
+html {
+  scroll-behavior: smooth;
 }
