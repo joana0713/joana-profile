@@ -146,7 +146,7 @@ nav li:hover {
   color: white;
 }
 
-/* 이름 스타일 (스크린샷처럼 크게) */
+
 .hero-name {
   font-size: 72px;
   font-weight: 700;
@@ -248,8 +248,9 @@ nav li.active {
 }
 
 .about-text {
-  margin-top: 15px;
-  line-height: 1.6;
+  margin-top: 20px;
+  line-height: 2.4;
+  font-size: 17px;
 }
 
 .stats {
@@ -320,6 +321,7 @@ html {
 .resume {
   padding: 100px 120px;
   background: #f8fafc;
+  color: #353535
 }
 
 .resume-desc {
@@ -366,18 +368,20 @@ html {
 }
 
 .resume-date {
-  font-size: 14px;
-  font-weight: 500;
-  color: #3b82f6;
-  display: block;
+  color: #348ea3;
   margin-bottom: 15px;
+  font-size: 17px;
+  font-weight: 600;
+  display: block;
+  margin-top: 10px;
+  margin-left: 5px;
 }
 
 .resume-item p,
 .resume-item li {
-  font-size: 15px;
+  color: #484b4f;
+  font-size: 16px;
   line-height: 1.8;
-  color: #475569;
 }
 
 .resume-item ul {
@@ -446,7 +450,7 @@ html {
 
 .portfolio-img {
   width: 100%;
-  height: 300px;   /* 이미지 더 크게 */
+  height: 300px;
   object-fit: cover;
   display: block;
 }
@@ -775,7 +779,7 @@ textarea {
 .error {
   color: #ff3b3b;
   font-size: 12px;
-  min-height: 16px; /* ⭐ 핵심 */
+  min-height: 16px;
 }
 
 .button-wrapper {
@@ -795,4 +799,123 @@ button {
 
 button:hover {
   background: #0f8bcf;
+}
+
+/* Portfolio Detail */
+.detail-header {
+  background: #0a1f33;
+  color: white;
+  padding: 25px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breadcrumb a {
+  color: #149ddd;
+  text-decoration: none;
+}
+
+.portfolio-details {
+  display: flex;
+  gap: 50px;
+  padding: 40px 60px;
+  height: calc(100vh - 90px);
+  background-color: #f1f1f1;
+}
+
+.slider-wrapper {
+  flex: 2;
+  overflow: hidden;
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  max-height: 80vh;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  min-width: 100%; 
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  max-height: 75vh;
+}
+
+.detail-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.detail-dot {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  display: inline-block;
+  margin: 0 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.detail-dot.active {
+  background: #149ddd;
+}
+
+.project-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.info-card {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.info-card h3 {
+  margin-bottom: 10px;
+}
+
+.divider {
+  height: 1px;
+  background: #eee;
+  margin: 15px 0;
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-card li {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.project-title {
+  margin-bottom: 15px;
+}
+
+.project-desc {
+  line-height: 1.6;
+  color: #555;
+  font-size: 17px;
+}
+
+.detail-url {
+  color: #31a2b5;
+  font-size: 17px;
+  margin-left: 5px;
+}
+
+.flex {
+  display: flex;
 }

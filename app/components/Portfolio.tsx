@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Search, Link, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Search, X, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
@@ -95,7 +96,7 @@ export default function Portfolio() {
             </span>
 
             <Image
-              src={item.image[0]} // 첫번째 이미지 썸네일
+              src={item.image[0]} // 
               alt={item.title}
               width={800}
               height={500}
@@ -108,12 +109,15 @@ export default function Portfolio() {
                   className="icon-btn"
                   onClick={() => openGallery(item.image)}
                 >
-                  <Search size={32} />
+                  <Search size={17} />
                 </div>
 
-                <div className="icon-btn">
-                  <Link size={32} />
-                </div>
+
+                <Link href={`/portfolio/${item.id}`} style = {{textDecoration: "none"}}>
+                  <div className="icon-btn">
+                    🔗
+                  </div>
+                </Link>
               </div>
 
               <p>{item.title}</p>

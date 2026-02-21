@@ -8,9 +8,9 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 
 const roles = [
+  "Software Engineer",
   "Full-Stack Developer",
-  "React Engineer",
-  "Frontend Developer"
+  "React Engineer"
 ];
 
 export default function Home() {
@@ -62,22 +62,21 @@ export default function Home() {
               </div>
 
               <div className="about-info">
-                <h3>Full-Stack Engineer & Web Developer.</h3>
+                <h3 style = {{marginBottom: '45px'}}>Software Engineer | Full-Stack Engineer.</h3>
 
                 <div className="info-grid">
                   <p><strong>Birthday:</strong> 13 July 1998</p>
                   <p><strong>Age:</strong> 27</p>
-                  <p><strong>Website:</strong> joanakelly.dev</p>
+                  {/* <p><strong>Website:</strong> joanakelly.dev</p> */}
                   <p><strong>Degree:</strong> BSc Computer Science</p>
-                  <p><strong>Phone:</strong> +1 000 000 000</p>
+                  {/* <p><strong>Phone:</strong> +1 000 000 000</p> */}
                   <p><strong>Email:</strong> joana0713kelly@outlook.com</p>
                   <p><strong>City:</strong> United State</p>
                   <p><strong>Freelance:</strong> Available</p>
                 </div>
 
                 <p className="about-text">
-                  Senior Full-Stack Developer with 5+ years experience building scalable SaaS
-                  applications using React, Next.js, Node.js and Laravel.
+                  Full-stack developer working on production web applications across frontend and backend. Experienced with React, Node.js, and database-backed systems. I aim to ship features that are stable, maintainable, and ready for real users.
                 </p>
               </div>
             </div>
