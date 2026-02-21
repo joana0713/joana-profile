@@ -1,6 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Skills from "./components/Skills";
+import Resume from "./components/Resume";
+import Portfolio from "./components/Portfolio";
+import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
 
 const roles = [
   "Full-Stack Developer",
@@ -76,28 +81,14 @@ export default function Home() {
                 </p>
               </div>
             </div>
-
-            {/* ===== STATS ===== */}
-            <div className="stats">
-              <div className="stat-box">
-                <h3>232</h3>
-                <p>Happy Clients</p>
-              </div>
-              <div className="stat-box">
-                <h3>521</h3>
-                <p>Projects</p>
-              </div>
-              <div className="stat-box">
-                <h3>1453</h3>
-                <p>Hours Of Support</p>
-              </div>
-              <div className="stat-box">
-                <h3>32</h3>
-                <p>Hard Workers</p>
-              </div>
-            </div>
           </div>
         </section>
+
+        <Skills />
+        <Resume />
+        <Portfolio />
+        <Testimonials />
+        <Contact />
     </>
   );
 }
