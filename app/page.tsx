@@ -74,7 +74,7 @@ export default function Home() {
                   <p><strong>Location:</strong> Turku, Finland</p>
                   {/* <p><strong>Website:</strong> joanakelly.dev</p> */}
                   <p><strong>Work:</strong> Remote / Freelance Available</p>
-                  <p><strong>Email:</strong> joana0713kelly@outlook.com</p>
+                  <p><strong>Email:</strong> joanak_dev@outlook.com</p>
                   <p><strong>GitHub:</strong> <a href = 'https://github.com/fullstackDev0404' target="_blank">github.com/fullstackDev0404</a></p>
                   {/* <p><strong>Phone:</strong> +381 621 45 1077</p> */}
                   <p><strong>Degree:</strong> BSc Computer Science</p>

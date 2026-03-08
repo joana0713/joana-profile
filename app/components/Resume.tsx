@@ -28,8 +28,8 @@ export default function Resume() {
                 <li>Open to Remote Opportunities</li>
 
                 <li>
-                  <a href="mailto:joana0713kelly@outlook.com">
-                    joana0713kelly@outlook.com
+                  <a href="mailto:joanak_dev@outlook.com">
+                    joanak_dev@outlook.com
                   </a>
                 </li>
 
